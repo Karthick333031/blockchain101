@@ -1,18 +1,7 @@
 pragma solidity >=0.6;
 
 contract ExpertiseTracker {
-    uint256 public myCounter;
-    string public nameval;
-    string public status;
-    mapping(string => string) public expertmap;
-    
-    function setMyCounter(uint _myCounter) public {
-        myCounter = _myCounter;
-    }
-    
-    function getMyCounter() public view returns(uint) {
-        return myCounter;
-    }
+    mapping(string => string) private expertmap;
     
     function setExpertStatus(string calldata _nameval, string calldata _status) public {
         expertmap[_nameval] = _status;
